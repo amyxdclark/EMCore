@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/EMCore.Api/EMCore.Api.csproj" />
+    <Project Path="src/EMCore.Application/EMCore.Application.csproj" />
+    <Project Path="src/EMCore.Domain/EMCore.Domain.csproj" />
+    <Project Path="src/EMCore.Infrastructure/EMCore.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/EMCore.Domain.Tests/EMCore.Domain.Tests.csproj" />
+  </Folder>
+</Solution>
