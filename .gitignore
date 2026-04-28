@@ -1,0 +1,30 @@
+# .NET build artifacts
+bin/
+obj/
+*.user
+.vs/
+.vscode/
+*.suo
+
+# NuGet
+*.nupkg
+packages/
+
+# dotnet publish
+publish/
+
+# Entity Framework migrations auto-generated
+*.db
+*.db-shm
+*.db-wal
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test results
+TestResults/
+coverage/
+
+# Logs
+*.log

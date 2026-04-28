@@ -1,0 +1,131 @@
+/*
+  Basic styles for the EMCore prototype.
+  These styles define a simple responsive navigation bar and a clean
+  layout for demonstration purposes. You can extend or replace these
+  styles as the application grows.
+*/
+
+:root {
+  --primary-color: #0052cc;
+  --secondary-color: #e60045;
+  --background-color: #f7f9fc;
+  --text-color: #333333;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.app-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: var(--primary-color);
+  transition: background 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+}
+
+main {
+  padding: 20px;
+}
+
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1 1 150px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.card p strong {
+  font-size: 1.5rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    max-height: 500px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
